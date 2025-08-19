@@ -1,13 +1,16 @@
 {
   "compilerOptions": {
-    "target": "es2020",
+    "target": "ES2021",                 // boleh tetap "es2020" kalau mau
     "module": "commonjs",
+    "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
       "@contracts/*": ["contracts/*"],
       "@scripts/*": ["scripts/*"],
       "@test/*": ["test/*"]
     },
+    "lib": ["ES2021", "DOM"],           // penting utk fetch/AbortController
+    "types": ["node"],                  // penting utk Node globals
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
